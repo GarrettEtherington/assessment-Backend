@@ -10,12 +10,23 @@ module.exports = {
         res.status(200).send(randomCompliment);
     },
     getFortune: (req, res) => {
-        const fortunes = ["you will be large.", "thou shall find a coin.", "you may or may not win the lottery..."]
+        const fortunes = ["you might possibly not die.", "you might possibly have a skeleton inside you.", "you may or maybe wont meet a totally hot ghost babe..."]
 
         let randomI = Math.floor(Math.random() * fortunes.length)
         let randomFortune = fortunes[randomI]
 
         res.status(200).send(randomFortune)
+    },
+    findHouse: (req, res) => {
+        const IPadd = `your mom's house: 308 Negra Arroyo Lane, Albuquerque, New Mexico`
+        res.status(200).send(IPadd)
+    },
+    killButton: (req, res) => {
+        res.status(200).send()
+    },
+    postStuff: (req, res) => {
+        const gug = req.body.beans
+        res.status(200).send(gug)
     }
 
 }
